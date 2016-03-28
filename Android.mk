@@ -25,12 +25,6 @@ bsdiff_common_cflags := \
 bsdiff_common_static_libs := \
     libbz
 
-bsdiff_common_unittests := \
-    bsdiff_unittest.cc \
-    extents_file_unittest.cc \
-    extents_unittest.cc \
-    test_utils.cc
-
 # "bsdiff" program.
 bsdiff_shared_libs := \
     libdivsufsort64 \
@@ -44,7 +38,16 @@ bspatch_src_files := \
     bspatch.cc \
     extents.cc \
     extents_file.cc \
-    file.cc
+    file.cc \
+    memory_file.cc
+
+# Unit test files.
+bsdiff_common_unittests := \
+    bsdiff_unittest.cc \
+    bspatch_unittest.cc \
+    extents_file_unittest.cc \
+    extents_unittest.cc \
+    test_utils.cc
 
 # Target executables.
 
